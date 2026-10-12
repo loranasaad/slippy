@@ -6,7 +6,7 @@ _No open bugs right now._
 
 ## Fixed
 
-### Fixed after 1.2.1 (unreleased) - Illustrator on Windows: `view.screenshot` crashed Illustrator
+### Fixed in 1.3.1 - Illustrator on Windows: `view.screenshot` crashed Illustrator
 
 **Seen:** 2026-10-09, first Windows run (Illustrator 30.8.2, Windows 11).
 `view.screenshot` on a fresh scratch document killed Illustrator with an
