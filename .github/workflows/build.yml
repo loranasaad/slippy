@@ -200,9 +200,12 @@ jobs:
         run: |
           want="v$(tr -d '[:space:]' < VERSION)"
           if [ "$GITHUB_REF_NAME" != "$want" ]; then
-            echo "::error::Tag $GITHUB_REF_NAME doesn't match VERSION ($want). Set VERSION, commit, then tag."
+            echo "::error::Tag $GITHUB_REF_NAME doesn't match VERSION ($want). Run tools/set_version.py, commit, then tag."
             exit 1
           fi
+
+      - name: Check every copy of the version matches VERSION
+        run: python3 tools/set_version.py --check
 
       - uses: actions/download-artifact@v5
         with:
